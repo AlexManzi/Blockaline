@@ -1,0 +1,24 @@
+.master{
+    background-image: url(./pics/Hex.png);
+}
+
+.values {
+    display: flex;
+    width: 30vw;
+    height: 91vh;
+    justify-content:space-around;
+    background-color: rgb(208, 201, 201);
+    opacity: 85%;
+}
+
+.span {
+    background-color: grey;
+    /* color:white; */
+    margin:10%;
+    border-radius: 25px;
+    opacity:85%;
+}
+
+.chosen {
+    background-color: green;
+}

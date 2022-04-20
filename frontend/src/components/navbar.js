@@ -10,7 +10,7 @@ function Navbar() {
       <NavLink className='logo' to="/">Blockaline</NavLink>
 
 
-      <NavLink className="link" to="/application">
+      <NavLink className="link" to="/my_page">
          My Page
       </NavLink>
 

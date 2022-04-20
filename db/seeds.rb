@@ -40,3 +40,9 @@ Application.create(seeker:s2, job:j1, accepted:false)
 
 Favorite.create(seeker:s1, job:j1)
 Favorite.create(seeker:s2, job:j1)
+
+Value.create(title:"Autonomy")
+Value.create(title:"Integrity")
+Value.create(title:"Integrity")
+Value.create(title:"Growth")
+Value.create(title:"Service")
