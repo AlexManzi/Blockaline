@@ -1,0 +1,35 @@
+#wholeparent {
+    display: grid;
+    grid-template-columns: 25vw auto;
+    justify-content: start;
+    font-size: 1.2rem;
+}
+
+#applybutton {
+    margin-left: 15vw;
+    margin-right: 10vw;
+    display: grid;
+    grid-template-columns: 5vw 5vw;
+    grid-template-rows: 5vh 5vh;
+    
+}
+
+#fave {
+    background-color: pink;
+    border-radius: 25px;
+}
+
+#apply {
+    background-color: lightskyblue;
+    border-radius: 25px;
+}
+
+#summarygrid {
+}
+
+#summaryinfo {
+    padding-top: 3vh;
+    height: 47.3vh;
+}
+
+

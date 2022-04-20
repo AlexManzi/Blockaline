@@ -2,3 +2,14 @@
     border: 1px solid black;
     height: 16vh;
 }
+
+#logo {
+    height: 50px;
+    width: auto;
+}
+
+#jobcard {
+    display: grid;
+    grid-template-columns: 5vw auto;
+    padding: 10px;
+}
