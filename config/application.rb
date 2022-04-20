@@ -10,6 +10,14 @@ module Blockaline
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
+    config.middleware.use ActionDispatch::Cookies
+    config.middleware.use ActionDispatch::Session::CookieStore
+
+    # config.action_dispatch.cookies_same_site_protection = :strict
+
+    config.api_only = true
+
+
 
     # Configuration for the application, engines, and railties goes here.
     #

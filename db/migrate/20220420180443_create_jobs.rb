@@ -9,6 +9,7 @@ class CreateJobs < ActiveRecord::Migration[6.1]
       t.references :company, null: false, foreign_key: true
       t.string :salary
       t.string :logo
+      t.integer :job_frontier
 
       t.timestamps
     end
