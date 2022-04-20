@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_20_180520) do
+ActiveRecord::Schema.define(version: 2022_04_20_205311) do
 
   create_table "applications", force: :cascade do |t|
     t.boolean "accepted"
@@ -61,6 +61,12 @@ ActiveRecord::Schema.define(version: 2022_04_20_180520) do
     t.string "email"
     t.string "frontier"
     t.string "password_digest"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "values", force: :cascade do |t|
+    t.string "title"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

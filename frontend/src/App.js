@@ -6,6 +6,7 @@ import Results from "./pages/results"
 import Navbar from './components/navbar';
 import Login from './pages/login';
 import Signup from './pages/signup';
+import MyPage from './MyPage';
 
 
 
@@ -65,6 +66,7 @@ function App() {
     <Route path="/results" element={<Results location={location} frontier={frontier} jobs={jobs} displayNewCard={displayNewCard} summary={summary} />}/>
     <Route path="/login" element={<Login/>}/>
     <Route path="/signup" element={<Signup/>}/>
+    <Route path="/my_page" element={<MyPage/>}/>
     <Route path="/results" element={<Results location={location} frontier={frontier} jobs={jobs} />}/>
 
 
