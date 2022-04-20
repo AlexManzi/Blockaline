@@ -5,9 +5,13 @@ function Jobcard({job, displayNewCard}) {
 
   return (
     <div id="jobpreview" onClick={()=> displayNewCard(job)}>
+      <div id="jobcard">
+      <img id="logo" src={job.logo}/>
       <h3>{job.title}</h3>
-      <h4>{job.description}</h4>
-      <h4>{job.benefits}</h4>
+      <h4>{job.company.rating}★</h4>
+      <h4>{job.company.title}</h4>
+      </div>
+      
     </div>
   )
 }
