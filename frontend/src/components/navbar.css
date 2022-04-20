@@ -1,0 +1,45 @@
+.Nav {
+    /* background-color: rgba(58, 58, 58); */
+    padding:1%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1vh;
+
+}
+
+.logo {
+    /* text-align: center; */
+  /* justify-content: space-around; */
+  margin-right: 5vw;
+  margin-left:2vw;
+  font-size: 240%;
+  font-family: Agentur;
+  text-decoration: none;
+  color:white;
+}
+
+.link {
+    text-decoration: none;
+    text-decoration-color: none;
+    color: rgba(255,255,255,0.8);
+    font-size: 18px;
+    font-weight: 500;
+    margin-right: -25vw;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: .2s ease;
+    
+}
+
+.Login {
+    /* margin-right: 4vw; */
+    text-decoration: none;
+    color: rgba(255,255,255,0.8);
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: .2s ease;
+}

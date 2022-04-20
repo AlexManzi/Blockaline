@@ -1,0 +1,41 @@
+.master {
+    /* background-image: url(../pics/blockBlack.jpg); */
+    height: 90.6vh;
+    display: block;
+    /* margin:0%; */
+    /* display: flex; */
+
+}
+
+.select {
+    padding:1%;
+}
+
+.Title {
+    font-size: 400%;
+    color: white;
+    display:inline-block;
+    cursor:default;
+    /* margin:auto; */
+    width: auto;
+}
+
+.subtitle {
+    color:antiquewhite;
+}
+
+.align {
+    padding:0.8%;
+    background-color:antiquewhite;
+    /* border:1px solid antiquewhite; */
+    margin-left:0.5vh;
+    /* margin-top:0.9vh; */
+    width: 10vh;
+    font-size: larger;
+}
+
+.animation {
+    margin-top: 20%;
+    height:15vh;
+    width: 15vh;
+}

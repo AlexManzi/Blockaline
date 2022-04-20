@@ -1,0 +1,28 @@
+#resultspage {
+    display: grid;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-color: white;
+    height: 100vh;
+}
+#totalparent {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+#jobpreviewcontainer {
+    background-color: lightgray;
+    margin-top: 10vh;
+    height: 70vh;
+    width: 26vw;
+    overflow-y: auto;
+    border: 1px solid black;
+}
+
+#positionsummary {
+    background-color: blue;
+    margin-top: 10vh;
+    height: 70vh;
+    width: 50vw;
+    border: 1px solid black;
+}
+

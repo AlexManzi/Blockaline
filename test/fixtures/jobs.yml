@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyString
+  benefits: MyString
+  remote: false
+  hybrid: false
+  company: one
+  salary: MyString
+  logo: MyString
+
+two:
+  title: MyString
+  description: MyString
+  benefits: MyString
+  remote: false
+  hybrid: false
+  company: two
+  salary: MyString
+  logo: MyString

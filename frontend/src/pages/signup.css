@@ -1,0 +1,68 @@
+#signupparent {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    background-image: url('https://1635225677.rsc.cdn77.org/images/understand-blockchain.png');
+    height: 100vh;
+}
+
+#signupbox {
+    margin-top: 12vh;
+    padding-top: 2vh;
+    height: 65vh;
+    width: 38vw;
+    background-color: lightgray;
+    border-radius: 5px;
+
+    
+}
+
+#signups {
+    display: grid;
+    grid-template-columns: 50vh;
+    grid-template-rows: 10vh 10vh 10vh;
+    justify-content: center;
+    height: 40%;
+    width: 100%;
+}
+
+.signupinput {
+    margin-bottom: 4vh;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    padding: 10px;
+}
+#names {
+    display: grid;
+    grid-template-columns: 12vw 12vw;
+    grid-template-rows: 5vh;
+    justify-content: space-between;
+}
+.nameinput {
+    font-size: 1.1rem;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: -1vh;
+}
+
+#signupbutton {
+    background-color: green;
+    margin-top: -1vh;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+#login {
+    display: grid;
+    grid-template-columns: 15vw 9vw;
+    justify-content: center;
+    padding-top: 17vh;
+    padding-right: 10vh;
+}
+
+#larea {
+    font-weight: bold;
+    color: green;
+    margin-left: -7vw;
+}
