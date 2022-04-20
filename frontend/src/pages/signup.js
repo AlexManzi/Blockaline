@@ -29,6 +29,7 @@ function Signup() {
 
   function handleLastName(e){
     setLastName(e.target.value)
+    console.log(lastName);
   }
 
   function handleFormSubmit(e){
@@ -71,7 +72,7 @@ function Signup() {
           </div>
         <input className='signupinput' placeholder='Enter Your Email' value={email} onChange={handleEmail}></input>
         <input type="password" className='signupinput' placeholder='Create Password' value={password} onChange={handlePassword}></input>
-        <select defaultValue="frontier" className='signupinput' value={frontier} onChange={handleFrontier}>
+        <select defaultValue={frontier} className='signupinput' onChange={handleFrontier}>
           <option value="frontier" disabled hidden> Choose Frontier</option>
           <option >Data Science</option>
           <option>Software Engineering</option>

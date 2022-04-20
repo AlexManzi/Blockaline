@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 2022_04_20_180520) do
     t.integer "company_id", null: false
     t.string "salary"
     t.string "logo"
+    t.integer "job_frontier"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["company_id"], name: "index_jobs_on_company_id"
