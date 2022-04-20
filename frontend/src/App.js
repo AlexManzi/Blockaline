@@ -28,7 +28,6 @@ function App() {
     });
   }, []);
 
-  console.log(seeker)
   console.log(jobs);
 
   useEffect(() => {
@@ -52,6 +51,8 @@ function App() {
     setSummary(summary)
   }
 
+  
+  const itemsToDisplay = jobs.filter(job => job.job_frontier === frontier.number)
 
   return (
     <div className="App">

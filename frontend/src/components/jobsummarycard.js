@@ -7,8 +7,8 @@ function Jobsummarycard({summary}) {
     return (
     <div>
         <div id="wholeparent">
-        <div id="summarygrid">
-        <h2>{summary.company.title}</h2>
+        <div id="summarygrid"> 
+        <h2>{summary.title}</h2>
         <h2>{summary.title}</h2>
         
         <h3>{summary.salary}</h3>
@@ -23,9 +23,9 @@ function Jobsummarycard({summary}) {
         </div>
         </div>
         <div id="summaryinfo">
-        <h2>{summary.company.mission_statement}</h2>
+        <h2>{summary.title}</h2>
         <h2>{summary.description}</h2>
-        <h2>{summary.company.tags}</h2>
+        <h2>{summary.title}</h2>
         </div>
     </div>
     )
