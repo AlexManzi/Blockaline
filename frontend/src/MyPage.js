@@ -7,6 +7,28 @@ import Favorite_card from './components/favorite_card';
 function MyPage() {
 
     const [values, SetValues] = useState([])
+    const [favorites, setFavorites] = useState([])
+
+    // useEffect(() => {
+    //     fetch("http://localhost:4000/favorites/(seeker_id)")
+    //     .then(resp => resp.json())
+    //     .then(data => {
+    //       setFavorites(data)
+    //     })
+    //   }, [])
+
+    // if the user in "state" is not defined / not logged in
+    // then we give an error message
+    // maybe an if else in the return (not sure)
+
+    //  let  mappedFavories = favorites.map(favorite => {
+    //      return(
+    //          <Favorite_card
+    //          key={favorite.key}
+    //          title={favorite.job.title}
+    //          />
+    //      )
+    //  })
 
     useEffect(() => {
         fetch("http://localhost:4000/values")
@@ -27,13 +49,14 @@ function MyPage() {
       })
 
 
+
   return (
     <div className='masterMyPage'>
 
         {/* <div className='faves'> */}
 
             {/* <h1>Favorites</h1>
-            <Favorite_card/>
+            {mappedFavorites}
             
         </div> */}
 

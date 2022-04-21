@@ -4,7 +4,6 @@ function Value_Card({value_title, value_id}) {
 
     const [click, setClick] = useState(false)
     const [valueBasket, setValueBasket] = useState(false)
-    console.log(click);
     // we need to set the user in state through the sign up / login/ auto login
     // when we know who the user is we can set the green Classname dependent on 
     // if that user has that basket value or not 
@@ -15,7 +14,6 @@ function Value_Card({value_title, value_id}) {
 
     function handleClick() {
        click ? setClick(!click) : setClick(!click)
-       console.log(click);
        console.log(value_id);
 
       if (click){
