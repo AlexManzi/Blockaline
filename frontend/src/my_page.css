@@ -1,11 +1,19 @@
-.master{
+.masterMyPage{
     background-image: url(./pics/Hex.png);
+    /* height: auto; */
+
+}
+
+#Title {
+    background-color: rgb(108, 248, 248);
+    width: 110%;
+    border-radius: 5%;
 }
 
 .values {
     display: flex;
-    width: 30vw;
-    height: 91vh;
+    width: 15vw;
+    height: 100vh;
     justify-content:space-around;
     background-color: rgb(208, 201, 201);
     opacity: 85%;
@@ -13,12 +21,32 @@
 
 .span {
     background-color: grey;
+    margin:auto;
+    width:110%;
+    padding:5%;
     /* color:white; */
-    margin:10%;
+    margin-top:10%;
+    /* margin-right:15%; */
     border-radius: 25px;
     opacity:85%;
+    cursor:pointer;
+    /* text-align: center; */
 }
 
 .chosen {
     background-color: green;
+    width:110%;
+    padding:5%;
+    /* color:white; */
+    margin-top:10%;
+    margin-right:15%;
+    border-radius: 25px;
+    opacity:85%;
+    cursor:pointer;
+}
+
+.faves {
+    width:fit-content;
+    margin-left:50%;
+    background-color: brown;
 }

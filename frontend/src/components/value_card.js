@@ -1,13 +1,17 @@
-import React from 'react'
+import React,{useState} from 'react'
 
 function Value_Card({value}) {
 
-    function handleClick(e) {
-        // e.target.element.classList.add("chosen")
+    const [click, setClick] = useState(false)
+
+    function handleClick() {
+       click ? setClick(false) : setClick(true)
+       console.log(click);
+
     }
 
   return (
-    <div className='span' onClick={handleClick}>{value.title}</div>
+    <div className= {click ? "chosen" : "span"} onClick={handleClick}>{value.title}</div>
   )
 }
 

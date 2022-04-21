@@ -1,6 +1,7 @@
 import React, {useEffect, useState}from 'react'
 import './my_page.css';
 import Value_Card from './components/value_card';
+import Favorite_card from './components/favorite_card';
 
 
 function MyPage() {
@@ -15,8 +16,6 @@ function MyPage() {
         })
       }, [])
 
-      console.log(values);
-
       let mappedValues = values.map(value => {
           return(
               <Value_Card
@@ -28,15 +27,25 @@ function MyPage() {
 
 
   return (
-    <div className='master'>
+    <div className='masterMyPage'>
+
+        {/* <div className='faves'> */}
+
+            {/* <h1>Favorites</h1>
+            <Favorite_card/>
+            
+        </div> */}
 
         <div className='values'>
             <div>
-                
-                <h2>My Values</h2>
+
+                <h2 id='Title'>My Values</h2>
 
                 {mappedValues}
             </div>
+
+    
+
         </div>
 
 
