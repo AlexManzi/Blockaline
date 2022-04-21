@@ -3,7 +3,7 @@ import './favorite_card.css';
 
 function Favoritecard({info}) {
 
-  console.log(info)
+  // console.log(info)
   return (
     <div>
         <div>
