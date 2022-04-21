@@ -15,8 +15,12 @@ function Login() {
     setPassword(event.target.value)
   }
 
+  function alertVibes() {
+    alert('You are now logged in!')
+  }
+
   function handleLogin() {
-    fetch("/sessions", {
+    fetch("/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -27,7 +31,9 @@ function Login() {
       })
     })
     .then(resp => resp.json())
-    .then(data => console.log(data))
+    .then(data => {
+      alertVibes()
+      console.log(data)})
 
   }
 

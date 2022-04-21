@@ -17,7 +17,6 @@ function App() {
 
   let [jobs, setJobs] = useState([])
   const [frontier, setFrontier] = useState("")
-  let [engineerArr, setEngineerArr] = useState([])
   const [location, setLocation] = useState("")
   const [seeker, setSeeker] = useState(null)
   let [summary, setSummary] = useState(
@@ -56,7 +55,6 @@ function App() {
   }, []);
 
   console.log(jobs);
-  console.log(seeker);
 
   useEffect(() => {
     fetch("http://localhost:4000/jobs")
@@ -83,7 +81,7 @@ function App() {
   return (
     <div className="App">
       
-    <Navbar/>
+    <Navbar setSeeker={setSeeker} seeker={seeker}/>
 
     <Routes>
 
@@ -91,7 +89,7 @@ function App() {
     <Route path="/results" element={<Results location={location} frontier={frontier} jobs={jobs} displayNewCard={displayNewCard} summary={summary} />}/>
     <Route path="/login" element={<Login/>}/>
     <Route path="/signup" element={<Signup/>}/>
-    <Route path="/my_page" element={<MyPage/>}/>
+    <Route path="/my_page" element={<MyPage seeker={seeker}/>}/>
 
 
     </Routes>
