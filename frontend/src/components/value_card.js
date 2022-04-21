@@ -5,27 +5,21 @@ function ValueCard({value_title, value_id, seeker}) {
     const [click, setClick] = useState(false)
     const [valueBasket, setValueBasket] = useState(false)
     
-    // if(seeker.baskets.include(value_id){
-    // setClick(true)
-    // })
-    // console.log(seeker.id);
-    // if(seeker.baskets.includes(value_id))
-    // useEffect(() => {
-    //   if(seeker.values.id = value_id) {
+
+    // useEffect(()=> {
+    //   if(seeker.values.inclues(value_id)) {
     //     setClick(true)
-    //   } else{
-    //     console.log('vibes')
+    //   } else {
+    //     console.log("unclicked");
     //   }
     // },[])
-    // useEffect(() => {
-    //   console.log(seeker)
-    // },[])
-    // console.log(seeker.baskets);
+    // something like this to set the green color to the ones that belong to the seeker/user
 
 
     function handleClick() {
        click ? setClick(!click) : setClick(!click)
        console.log(value_id);
+       console.log(click);
 
       if (click){
         fetch(`http://localhost:4000/bdestroy`, {
