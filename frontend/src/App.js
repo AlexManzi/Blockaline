@@ -12,14 +12,16 @@ import MyPage from './MyPage';
 
 
 
+
 function App() {
 
   let [jobs, setJobs] = useState([])
   const [frontier, setFrontier] = useState("")
+  let [engineerArr, setEngineerArr] = useState([])
   const [location, setLocation] = useState("")
   const [seeker, setSeeker] = useState(null)
-  let [summary, setSummary] = useState({
-    summary: {
+  let [summary, setSummary] = useState(
+    {
       benefits: "Cash",
       company: {
         id: 1,
@@ -42,7 +44,7 @@ function App() {
       title: "Flatiron Ceo",
       updated_at: "2022-04-21T15:07:43.735Z"
     }
-  })
+  )
 
   useEffect(() => {
     // auto-login
@@ -69,12 +71,12 @@ function App() {
 }, [])
 
   function formData(frontier,location) {
-   setFrontier(frontier)
-   setLocation(location)
+  setFrontier(frontier)
+  setLocation(location)
   }
 
-  function displayNewCard(summary) {
-    setSummary(summary)
+  function displayNewCard(job) {
+    setSummary(job)
   }
 
   return (
@@ -89,7 +91,6 @@ function App() {
     <Route path="/login" element={<Login/>}/>
     <Route path="/signup" element={<Signup/>}/>
     <Route path="/my_page" element={<MyPage/>}/>
-    <Route path="/results" element={<Results location={location} frontier={frontier} jobs={jobs} />}/>
 
 
     </Routes>
