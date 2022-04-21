@@ -17,7 +17,6 @@ function App() {
 
   let [jobs, setJobs] = useState([])
   const [frontier, setFrontier] = useState("")
-  let [engineerArr, setEngineerArr] = useState([])
   const [location, setLocation] = useState("")
   const [seeker, setSeeker] = useState(null)
   let [summary, setSummary] = useState(
@@ -88,7 +87,7 @@ function App() {
     <Routes>
 
     <Route path="/" element={<Home formData={formData} />}/>
-    <Route path="/results" element={<Results location={location} frontier={frontier} jobs={jobs} displayNewCard={displayNewCard} summary={summary} />}/>
+    <Route path="/results" element={<Results location={location} frontier={frontier} jobs={jobs} displayNewCard={displayNewCard} summary={summary} seeker={seeker}/>}/>
     <Route path="/login" element={<Login/>}/>
     <Route path="/signup" element={<Signup/>}/>
     <Route path="/my_page" element={<MyPage/>}/>
