@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
     def create
         seeker = Seeker.find_by(email: params[:email])
         if seeker&.authenticate(params[:password])
-            session[:seeker] = seeker.id
+            session[:seeker_id] = seeker.id
             render json: seeker, status: :created
         else
             render json: { errors: ["Invalid username or password"] }, status: :unauthorized
