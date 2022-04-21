@@ -27,7 +27,7 @@ function Home({formData}) {
   return (
     <div className='master'>
 
-      <h1 className='Title'> Don't Work - Align </h1>
+      <h1 className='Title'> Don't Work — Align </h1>
       <h2 className='subtitle'> Align Your Values With The Blockchain</h2>
 
       <div className='selectContainer'>

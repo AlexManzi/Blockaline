@@ -48,12 +48,13 @@ function App() {
     // auto-login
     fetch("/me").then((r) => {
       if (r.ok) {
-        r.json().then((seekerData) => console.log(seekerData));
+        r.json().then((seekerData) => setSeeker(seekerData));
       }
     });
   }, []);
 
   console.log(jobs);
+  console.log(seeker);
 
   useEffect(() => {
     fetch("http://localhost:4000/jobs")
@@ -73,8 +74,8 @@ function App() {
    setLocation(location)
   }
 
-  function displayNewCard(summary) {
-    setSummary(summary)
+  function displayNewCard(job) {
+    setSummary(job)
   }
 
   return (
@@ -88,8 +89,7 @@ function App() {
     <Route path="/results" element={<Results location={location} frontier={frontier} jobs={jobs} displayNewCard={displayNewCard} summary={summary} />}/>
     <Route path="/login" element={<Login/>}/>
     <Route path="/signup" element={<Signup/>}/>
-    <Route path="/my_page" element={<MyPage/>}/>
-    <Route path="/results" element={<Results location={location} frontier={frontier} jobs={jobs} />}/>
+    <Route path="/my_page" element={<MyPage seeker={seeker}/>}/>
 
 
     </Routes>

@@ -68,4 +68,4 @@ Value.create(title:"Communication")
 Value.create(title:"Community")
 Value.create(title:"Creativity")
 
-Basket.create(seeker:s1, value:v1)
+# Basket.create(seeker:s1, value:v1)
