@@ -18,7 +18,20 @@ function App() {
   const [frontier, setFrontier] = useState("")
   const [location, setLocation] = useState("")
   const [seeker, setSeeker] = useState(null)
-  let [summary, setSummary] = useState([])
+  let [summary, setSummary] = useState({
+    summary: {
+      benefits: "Cash",
+      company: {
+        mission_statement: "We’re committed to helping people learn the skills they need to change their lives and the world for the better.",
+        rating: 5,
+        tags: "Positive, Upbeat, Fun",
+        title: "Flatiron"
+      },
+      remote: false,
+      salary: "$200,000",
+      title: "Flatiron Ceo"
+    }
+  })
 
   useEffect(() => {
     // auto-login
@@ -36,6 +49,7 @@ function App() {
     .then(resp => resp.json())
     .then(data => {
       setJobs(data)
+
     })
   }, [])
 
@@ -51,9 +65,6 @@ function App() {
   function displayNewCard(summary) {
     setSummary(summary)
   }
-
-  
-  const itemsToDisplay = jobs.filter(job => job.job_frontier === frontier.number)
 
   return (
     <div className="App">

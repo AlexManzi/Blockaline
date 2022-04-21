@@ -8,12 +8,12 @@ function Jobsummarycard({summary}) {
     <div>
         <div id="wholeparent">
         <div id="summarygrid"> 
-        <h2>{summary.title}</h2>
+        <h2>{summary.summary.company.title}</h2>
         <h2>{summary.title}</h2>
         
         <h3>{summary.salary}</h3>
-        <h3>{summary.hybrid}</h3>
-        <h4>{summary.remote}</h4>
+        <h3>{summary.summary.company.hybrid}</h3>
+        <h4>{summary.summary.company.remote}</h4>
         </div>
         <div id="applygrid">
         <div id="applybutton">
@@ -23,9 +23,9 @@ function Jobsummarycard({summary}) {
         </div>
         </div>
         <div id="summaryinfo">
-        <h2>{summary.title}</h2>
+        <h2>{summary.summary.company.mission_statement}</h2>
         <h2>{summary.description}</h2>
-        <h2>{summary.title}</h2>
+        <h2>{summary.summary.company.tags}</h2>
         </div>
     </div>
     )
