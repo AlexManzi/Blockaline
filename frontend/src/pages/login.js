@@ -16,7 +16,7 @@ function Login() {
   }
 
   function handleLogin() {
-    fetch("http://localhost:4000/sessions", {
+    fetch("/sessions", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

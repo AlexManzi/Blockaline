@@ -42,7 +42,7 @@ function Signup() {
   }
 
   function handleSubmit() {
-    fetch("http://localhost:4000/seekers", {
+    fetch("/seekers", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
