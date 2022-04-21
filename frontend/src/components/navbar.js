@@ -1,9 +1,30 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './navbar.css';
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 
-function Navbar() {
+function Navbar({seeker,setSeeker}) {
+
+  const [bttnToggle, setBttnToggle] = useState(seeker ? "true" : false)
+
+  console.log(seeker);
+
+  console.log(bttnToggle);
+
+
+  function handleLogout() {
+    fetch("/logout", { method: "DELETE" }).then((r) => {
+      if (r.ok) {
+        setSeeker(null);
+        console.log(seeker);
+      }
+    });
+  }
+
+ function  handleVibes () {
+   console.log(bttnToggle);
+ }
+
   return (
     <div className='Nav'>
       
@@ -19,8 +40,14 @@ function Navbar() {
         </NavLink>
 
         <NavLink className="Login" to="/login">
-        Login
+        {seeker ? null : "Login" }
         </NavLink>
+
+        <div className="Logout" onClick={handleLogout}>
+        {seeker ? "Logout" : null }
+        </div>
+
+        {/* <button onClick={handleVibes}>A-line</button> */}
   
 
     </div>
