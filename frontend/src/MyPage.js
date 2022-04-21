@@ -20,7 +20,8 @@ function MyPage() {
           return(
               <Value_Card
                key={value.id}
-               value={value}
+               value_title={value.title}
+               value_id={value.id}
                />
           )
       })

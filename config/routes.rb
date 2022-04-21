@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :baskets
   resources :values
   resources :favorites
   resources :applications

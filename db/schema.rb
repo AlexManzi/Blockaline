@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_20_205311) do
+ActiveRecord::Schema.define(version: 2022_04_21_005501) do
 
   create_table "applications", force: :cascade do |t|
     t.boolean "accepted"
@@ -20,6 +20,15 @@ ActiveRecord::Schema.define(version: 2022_04_20_205311) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["job_id"], name: "index_applications_on_job_id"
     t.index ["seeker_id"], name: "index_applications_on_seeker_id"
+  end
+
+  create_table "baskets", force: :cascade do |t|
+    t.integer "seeker_id", null: false
+    t.integer "value_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["seeker_id"], name: "index_baskets_on_seeker_id"
+    t.index ["value_id"], name: "index_baskets_on_value_id"
   end
 
   create_table "companies", force: :cascade do |t|
@@ -73,6 +82,8 @@ ActiveRecord::Schema.define(version: 2022_04_20_205311) do
 
   add_foreign_key "applications", "jobs"
   add_foreign_key "applications", "seekers"
+  add_foreign_key "baskets", "seekers"
+  add_foreign_key "baskets", "values"
   add_foreign_key "favorites", "jobs"
   add_foreign_key "favorites", "seekers"
   add_foreign_key "jobs", "companies"
