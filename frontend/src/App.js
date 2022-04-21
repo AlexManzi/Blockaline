@@ -18,7 +18,31 @@ function App() {
   const [frontier, setFrontier] = useState("")
   const [location, setLocation] = useState("")
   const [seeker, setSeeker] = useState(null)
-  let [summary, setSummary] = useState([])
+  let [summary, setSummary] = useState({
+    summary: {
+      benefits: "Cash",
+      company: {
+        id: 1,
+        mission_statement: "We’re committed to helping people learn the skills they need to change their lives and the world for the better.",
+        rating: 5,
+        tags: "Positive, Upbeat, Fun",
+        title: "Flatiron",
+        created_at: "2022-04-21T15:07:43.613Z",
+        updated_at: "2022-04-21T15:07:43.613Z"
+      },
+      company_id: 1,
+      created_at: "2022-04-21T15:07:43.735Z",
+      description: "Be a Boss",
+      hybrid: true,
+      id: 1,
+      job_frontier: 1,
+      logo: "https://coursereport-s3-production.global.ssl.fastly.net/uploads/school/logo/8/original/flatironschool.png",
+      remote: false,
+      salary: "$200,000",
+      title: "Flatiron Ceo",
+      updated_at: "2022-04-21T15:07:43.735Z"
+    }
+  })
 
   useEffect(() => {
     // auto-login
@@ -29,7 +53,6 @@ function App() {
     });
   }, []);
 
-  console.log(seeker)
   console.log(jobs);
 
   useEffect(() => {
@@ -37,6 +60,7 @@ function App() {
     .then(resp => resp.json())
     .then(data => {
       setJobs(data)
+
     })
   }, [])
 
@@ -52,7 +76,6 @@ function App() {
   function displayNewCard(summary) {
     setSummary(summary)
   }
-
 
   return (
     <div className="App">

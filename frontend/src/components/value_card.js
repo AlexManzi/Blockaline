@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 
-function Value_Card({value_title, value_id}) {
+function ValueCard({value_title, value_id}) {
 
     const [click, setClick] = useState(false)
     const [valueBasket, setValueBasket] = useState(false)
@@ -52,4 +52,4 @@ function Value_Card({value_title, value_id}) {
   )
 }
 
-export default Value_Card
+export default ValueCard
