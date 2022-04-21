@@ -24,7 +24,7 @@ function MyPage({seeker}) {
     let mappedFavorites = favorites.map(favorite => {
         return(
             <Favoritecard
-            key={favorite.key}
+            key={favorite.id}
             info={favorite}
             />
         )

@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :favorites
   resources :applications
   resources :jobs
+  resources :baskets
   resources :companies
   resources :seekers, only:[:create]
   # resources :sessions

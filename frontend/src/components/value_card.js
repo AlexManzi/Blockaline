@@ -4,10 +4,7 @@ function ValueCard({value_title, value_id, seeker}) {
 
     const [click, setClick] = useState(false)
     const [valueBasket, setValueBasket] = useState(false)
-    // we need to set the user in state through the sign up / login/ auto login
-    // when we know who the user is we can set the green Classname dependent on 
-    // if that user has that basket value or not 
-
+    
     // if(user.baskets.include(value_id){
     // setClick(true)
     // })
@@ -18,7 +15,7 @@ function ValueCard({value_title, value_id, seeker}) {
        console.log(value_id);
 
       if (click){
-          fetch(`http://localhost:4000/baskets/${seeker.id}`, {
+          fetch(`http://localhost:4000/baskets/${value_id}`, {
               method: "DELETE",
               headers: {
                   "Content-Type": "application/json"
@@ -28,7 +25,7 @@ function ValueCard({value_title, value_id, seeker}) {
           .then(data => console.log(data))
    
     }  else {
-        fetch(`http://localhost:4000/baskets/${value_id}`, {
+        fetch(`http://localhost:4000/baskets`, {
             method: "POST",
             headers: {
               "Content-Type": "application/json"
