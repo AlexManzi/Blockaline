@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 
-function ValueCard({value_title, value_id}) {
+function ValueCard({value_title, value_id, seeker}) {
 
     const [click, setClick] = useState(false)
     const [valueBasket, setValueBasket] = useState(false)
@@ -11,13 +11,14 @@ function ValueCard({value_title, value_id}) {
     // if(user.baskets.include(value_id){
     // setClick(true)
     // })
+    // console.log(seeker.id);
 
     function handleClick() {
        click ? setClick(!click) : setClick(!click)
        console.log(value_id);
 
       if (click){
-          fetch("http://localhost:4000/baskets/2", {
+          fetch(`http://localhost:4000/baskets/${seeker.id}`, {
               method: "DELETE",
               headers: {
                   "Content-Type": "application/json"
@@ -27,13 +28,13 @@ function ValueCard({value_title, value_id}) {
           .then(data => console.log(data))
    
     }  else {
-        fetch("http://localhost:4000/baskets", {
+        fetch(`http://localhost:4000/baskets/${value_id}`, {
             method: "POST",
             headers: {
               "Content-Type": "application/json"
             },
             body: JSON.stringify({
-              seeker_id: 2,
+              seeker_id: seeker.id,
               value_id: value_id
               // this seeker_id is meant to be dynamic based on seeker state / seesion
             })

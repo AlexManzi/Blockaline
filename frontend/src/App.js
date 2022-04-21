@@ -50,12 +50,13 @@ function App() {
     // auto-login
     fetch("/me").then((r) => {
       if (r.ok) {
-        r.json().then((seekerData) => console.log(seekerData));
+        r.json().then((seekerData) => setSeeker(seekerData));
       }
     });
   }, []);
 
   console.log(jobs);
+  console.log(seeker);
 
   useEffect(() => {
     fetch("http://localhost:4000/jobs")

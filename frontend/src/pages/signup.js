@@ -24,12 +24,10 @@ function Signup() {
 
   function handleFirstName(e) {
     setFirstName(e.target.value)
-    console.log(firstName);
   }
 
   function handleLastName(e){
     setLastName(e.target.value)
-    console.log(lastName);
   }
 
   function handleFormSubmit(e){

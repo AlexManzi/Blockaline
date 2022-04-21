@@ -4,7 +4,7 @@ import ValueCard from './components/value_card';
 import Favorite_card from './components/favorite_card';
 
 
-function MyPage() {
+function MyPage({seeker}) {
 
     const [values, SetValues] = useState([])
     const [favorites, setFavorites] = useState([])
@@ -44,6 +44,7 @@ function MyPage() {
                key={value.id}
                value_title={value.title}
                value_id={value.id}
+               seeker={seeker}
                />
           )
       })
