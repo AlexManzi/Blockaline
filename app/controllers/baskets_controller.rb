@@ -8,9 +8,12 @@ class BasketsController < ApplicationController
     end
 
     def destroy
-        basket = Basket.find(params[:id])
+        number = Seeker.find(params[:seeker_id]).values.find(params[:value_id]).id
+        basket = Basket.find(number)
+        # user = Seeker.find(params[:seeker_id]) 
+        # basket = user.baskets.find(params[:id])
         basket.destroy
-        head :no_content
+        render json: {done:"Done"}
     rescue ActiveRecord::RecordNotFound 
         render json:{errors:"Basket Not Found"}, status:404
     end
