@@ -3,10 +3,24 @@ import './results.css';
 import Jobcard from '../components/jobcard';
 import Jobsummarycard from '../components/jobsummarycard';
 
-function Results({jobs,frontier,location, displayNewCard, summary}) {
+function Results({jobs,frontier,location, displayNewCard, summary, seeker }) {
   
-  console.log(frontier);
-  console.log(location);
+  console.log(seeker)
+
+  function handleAddFavorite() {
+    fetch("/favorites", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        seeker_id: seeker.id,
+        job_id: summary.id
+      })
+    })
+    .then(resp => resp.json())
+    .then(data => console.log(data))
+  }
 
   let jobsMap = jobs.map(job => {
     return (
@@ -22,8 +36,8 @@ function Results({jobs,frontier,location, displayNewCard, summary}) {
       <Jobsummarycard
         key={summary.id}
         summary={summary}
+        handleAddFavorite={handleAddFavorite}
         />
-
 
   return (
     <div id="resultspage">

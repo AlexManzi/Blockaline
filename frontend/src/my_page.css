@@ -1,7 +1,8 @@
 .masterMyPage{
     background-image: url(./pics/Hex.png);
-    /* height: auto; */
-
+    display: grid;
+    grid-template-columns: 20vw 10vw;
+    justify-content: start
 }
 
 #Title {
@@ -17,6 +18,7 @@
     justify-content:space-around;
     background-color: rgb(208, 201, 201);
     opacity: 85%;
+    overflow-y: auto;
 }
 
 .span {
@@ -46,7 +48,7 @@
 }
 
 .faves {
-    width:fit-content;
-    margin-left:50%;
+    width: 50vw;
+    height: 60vh;
     background-color: brown;
 }

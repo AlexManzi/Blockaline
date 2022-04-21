@@ -1,7 +1,7 @@
 import React from 'react'
 import './jobsummarycard.css';
 
-function Jobsummarycard({summary}) {
+function Jobsummarycard({summary, handleAddFavorite}) {
 
     console.log(summary)
     return (
@@ -17,7 +17,7 @@ function Jobsummarycard({summary}) {
         </div>
         <div id="applygrid">
         <div id="applybutton">
-            <button id="fave">Add to Favorites!</button>
+            <button id="fave" onClick={handleAddFavorite}>Add to Favorites!</button>
             <button id="apply">Apply!</button>
         </div>
         </div>
