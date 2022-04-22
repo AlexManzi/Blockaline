@@ -9,7 +9,7 @@ function Home({formData}) {
   const [frontierValue, setFrontierValue] = useState("frontier") 
   const [cityValue, setCityValue] = useState("location")
   // Ask Bradon. Why does the state need to be the same 'String' as the defualt value
-
+  let [displayCity, setDisplayCity] = useState("Denver")
 
 
   function setFrontier (event) {
@@ -31,8 +31,11 @@ function Home({formData}) {
       <h2 className='subtitle'> Align Your Values With The Blockchain</h2>
 
       <div className='selectContainer'>
+
+        <h1>{displayCity}</h1>
+        <input placeholder='Enter Your City'></input>
  
-    <select defaultValue={frontierValue} className='select' onChange={setFrontier}>
+    {/* <select defaultValue={frontierValue} className='select' onChange={setFrontier}>
 
         <option value="frontier" disabled hidden> Choose Frontier</option>
         <option >Data Science</option>
@@ -50,7 +53,7 @@ function Home({formData}) {
         <option >Austin</option>
         <option>Chicago</option>
         <option>All Locations</option>
-    </select>
+    </select> */}
 
    <Link to="/results" onClick={onFormData}> <button className='align'>Align</button></Link>
   </div>

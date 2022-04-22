@@ -6,7 +6,8 @@ import Results from "./pages/results"
 import Navbar from './components/navbar';
 import Login from './pages/login';
 import Signup from './pages/signup';
-import MyPage from './MyPage';
+import MyPage from './pages/MyPage';
+import Pricing from './pages/pricing'
 
 
 
@@ -18,7 +19,17 @@ function App() {
   let [jobs, setJobs] = useState([])
   const [frontier, setFrontier] = useState("")
   const [location, setLocation] = useState("")
-  const [seeker, setSeeker] = useState(null)
+  const [seeker, setSeeker] = useState(
+    {
+      created_at: "2022-04-22T02:21:46.440Z",
+      email: "Alex@gmail.com",
+      first_name: "",
+      frontier: "Software Engineering",
+      id: 3,
+      last_name: "",
+      password_digest: "",
+      updated_at: "2022-04-22T02:21:46.440Z"
+  })
   let [summary, setSummary] = useState(
     {
       benefits: "Cash",
@@ -90,6 +101,7 @@ function App() {
     <Route path="/login" element={<Login/>}/>
     <Route path="/signup" element={<Signup/>}/>
     <Route path="/my_page" element={<MyPage seeker={seeker}/>}/>
+    <Route path="/pricing" element={<Pricing jobs={jobs}/>} />
 
 
     </Routes>

@@ -1,7 +1,7 @@
 .masterMyPage{
-    background-image: url(./pics/Hex.png);
+    background-image: url(../pics/Hex.png);
     display: grid;
-    grid-template-columns: 20vw 10vw;
+    grid-template-columns: auto 80vw;
     justify-content: start
 }
 
@@ -48,7 +48,12 @@
 }
 
 .faves {
-    width: 50vw;
-    height: 60vh;
-    background-color: brown;
+    margin-top: 10vh;;
+    margin-left: 10vw;
+    width: 72vw;
+    height: 70vh;
+}
+
+#titleforfav {
+    margin-left: -11vw;
 }

@@ -34,7 +34,7 @@ function Login() {
     .then(data => {
       alertVibes()
       console.log(data)})
-
+      window.location.reload();
   }
 
   return (

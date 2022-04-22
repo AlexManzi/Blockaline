@@ -1,3 +1,28 @@
-#wholeparent {
+#favcard {
     height:10vh;
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+    padding: 10px;
+    height: 20vh;
+    width: 40vw;
+    margin-bottom: 4vh;
+    margin-top: 2vh;
+    margin-left: 10vw;
+}
+
+#logopic {
+    height: 80px;
+    width: auto;
+}
+
+#presstoapply{
+    padding-left: 4vw;
+    font-size: 1.1rem;
+    padding-right: 4vw;
+    background-color: blue;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
 }

@@ -16,20 +16,23 @@
 
 #fave {
     background-color: pink;
-    border-radius: 25px;
+    border-radius: 15px;
+    font-weight: bold;
 }
 
 #apply {
-    background-color: lightskyblue;
-    border-radius: 25px;
+    background-color: blue;
+    border-radius: 15px;
+    color: white;
+    font-weight: bold;
 }
 
 #summarygrid {
 }
 
 #summaryinfo {
-    padding-top: 3vh;
-    height: 47.3vh;
+    padding-top: 20vh;
+    height: 50vh;
 }
 
 

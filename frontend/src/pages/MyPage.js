@@ -1,13 +1,14 @@
 import React, {useEffect, useState}from 'react'
 import './my_page.css';
-import ValueCard from './components/value_card';
-import Favoritecard from './components/favorite_card';
+import ValueCard from '../components/value_card';
+import Favoritecard from '../components/favorite_card';
 
 
 function MyPage({seeker}) {
 
     const [values, SetValues] = useState([])
     const [favorites, setFavorites] = useState([])
+    console.log(favorites)
 
     useEffect(() => {
         fetch(`http://localhost:4000/favorites/`)
@@ -60,7 +61,7 @@ return (
             </div>
         </div>
         <div className='faves'>
-            <h1>Favorites</h1>
+            <h1 id="titleforfav">Favorite Alignments</h1>
             {mappedFavorites}
         </div>
     </div>
