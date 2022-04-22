@@ -42,30 +42,33 @@ Favorite.create(seeker:s1, job:j1)
 Favorite.create(seeker:s2, job:j1)
 
 # how can we iterate this list to seed?
-# ["Acceptance", "Accountability", "Achievement", "Adaptability", "Adventure", "Authenticity", "Authority", "Autonomy", "Balance", "Boldness", "Bravery", "Candor", "Challenge", "Clarity", "Collaboration", "Compassion", "Communication", "Community", "Contribution", "Creativity", "Curiosity", "Dependability", "Determination", "Diversity", "Empathy", "Enthusiasm", "Equality", "Family", "Fairness", "Flexibility", "Friendship", "Growth", "Happiness", "Hard work", "Honesty", "Humility", "Humor", "Impact", "Improvement", "Ingenuity", "Innovation", "Kindness", "Knowledge", "Leadership", "Learning", "Loyalty", "Meaningful work", "Optimism", "Ownership", "Participation", "Patience", "Peace", "Persistence", "Popularity", "Power", "Quality", "Recognition", "Relationships", "Reliability", "Reputation", "Respect", "Responsibility", "Results", "Security", "Self-improvement", "Simplicity", "Spirituality", "Stability", "Success", "Sustainability", "Teamwork", "Tenacity", "Time management", "Transparency", "Trustworthiness", "Wealth", "Wisdom", "Work ethic", "Work-life balance"]
+box = ["Acceptance", "Accountability", "Achievement", "Adaptability", "Adventure", "Authenticity", "Authority", "Autonomy", "Balance", "Boldness", "Bravery", "Candor", "Challenge", "Clarity", "Collaboration", "Compassion", "Communication", "Community", "Contribution", "Creativity", "Curiosity", "Dependability", "Determination", "Diversity", "Empathy", "Enthusiasm", "Equality", "Family", "Fairness", "Flexibility", "Friendship", "Growth", "Happiness", "Hard work", "Honesty", "Humility", "Humor", "Impact", "Improvement", "Ingenuity", "Innovation", "Kindness", "Knowledge", "Leadership", "Learning", "Loyalty", "Meaningful work", "Optimism", "Ownership", "Participation", "Patience", "Peace", "Persistence", "Popularity", "Power", "Quality", "Recognition", "Relationships", "Reliability", "Reputation", "Respect", "Responsibility", "Results", "Security", "Self-improvement", "Simplicity", "Spirituality", "Stability", "Success", "Sustainability", "Teamwork", "Tenacity", "Time management", "Transparency", "Trustworthiness", "Wealth", "Wisdom", "Work ethic", "Work-life balance"]
+box.each do |b|
+    Value.create(title:b)
+end
 
-v1 = Value.create(title:"Autonomy")
-Value.create(title:"Integrity")
-Value.create(title:"Integrity")
-Value.create(title:"Growth")
-Value.create(title:"Service")
+# v1 = Value.create(title:"Autonomy")
+# Value.create(title:"Integrity")
+# Value.create(title:"Integrity")
+# Value.create(title:"Growth")
+# Value.create(title:"Service")
 
-Value.create(title:"Acceptance")
-Value.create(title:"Accountability")
-Value.create(title:"Achievement")
-Value.create(title:"Adaptability")
-Value.create(title:"Adventure")
-Value.create(title:"Authority")
-Value.create(title:"Authenticity")
-Value.create(title:"Balance")
-Value.create(title:"Boldness")
+# Value.create(title:"Acceptance")
+# Value.create(title:"Accountability")
+# Value.create(title:"Achievement")
+# Value.create(title:"Adaptability")
+# Value.create(title:"Adventure")
+# Value.create(title:"Authority")
+# Value.create(title:"Authenticity")
+# Value.create(title:"Balance")
+# Value.create(title:"Boldness")
 
-Value.create(title:"Challenge")
-Value.create(title:"Collaboration")
-Value.create(title:"Compassion")
+# Value.create(title:"Challenge")
+# Value.create(title:"Collaboration")
+# Value.create(title:"Compassion")
 
-Value.create(title:"Communication")
-Value.create(title:"Community")
-Value.create(title:"Creativity")
+# Value.create(title:"Communication")
+# Value.create(title:"Community")
+# Value.create(title:"Creativity")
 
 # Basket.create(seeker:s1, value:v1)

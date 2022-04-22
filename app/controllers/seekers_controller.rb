@@ -12,7 +12,7 @@ class SeekersController < ApplicationController
         seeker_id = session[:seeker_id]
         if seeker_id
             seeker = Seeker.find(seeker_id)
-            render json: seeker, status: :created
+            render json: seeker, status: :created, include: [:values]
         else
             render json: { error: "Unauthorized" }, status: :unauthorized
         end

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :favorites
   resources :applications
   resources :jobs
-  resources :baskets
+  resources :baskets, only:[:create]
   resources :companies
   resources :seekers, only:[:create]
   # resources :sessions
@@ -12,5 +12,6 @@ Rails.application.routes.draw do
   get "/me", to: "seekers#show"
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
+  post "/bdestroy", to: "baskets#destroy"
 
 end
