@@ -3,6 +3,10 @@ import './jobsummarycard.css';
 
 function Jobsummarycard({summary, handleAddFavorite}) {
 
+
+    function applyFunction() {
+        alert("You've applied to this position! We hope you hear back soon!")
+    }
     console.log(summary)
     return (
     <div>
@@ -18,7 +22,7 @@ function Jobsummarycard({summary, handleAddFavorite}) {
         <div id="applygrid">
         <div id="applybutton">
             <button id="fave" onClick={handleAddFavorite}>Add to Favorites!</button>
-            <button id="apply">Apply!</button>
+            <button id="apply" onClick={applyFunction}>Apply!</button>
         </div>
         </div>
         </div>

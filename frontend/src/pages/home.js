@@ -32,8 +32,6 @@ function Home({formData}) {
 
       <div className='selectContainer'>
 
-        <h1>{displayCity}</h1>
-        <input placeholder='Enter Your City'></input>
  
     {/* <select defaultValue={frontierValue} className='select' onChange={setFrontier}>
 
@@ -44,16 +42,17 @@ function Home({formData}) {
         <option>UX Design</option>
         <option>All Frontiers</option>
 
-  </select>
+  </select> */}
 
     <select className='select' defaultValue={cityValue} onChange={setCity}>
         <option value="location" disabled hidden> Choose Location</option>
-        <option>New York</option>
         <option >Los Angeles</option>
+        <option>New York</option>
         <option >Austin</option>
         <option>Chicago</option>
+        <option >Denver</option>
         <option>All Locations</option>
-    </select> */}
+    </select> 
 
    <Link to="/results" onClick={onFormData}> <button className='align'>Align</button></Link>
   </div>

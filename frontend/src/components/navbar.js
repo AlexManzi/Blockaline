@@ -32,7 +32,7 @@ function Navbar({seeker,setSeeker}) {
 
 
       <NavLink className="link" to="/my_page">
-         My Page
+        My Page
       </NavLink>
 
         <NavLink className="link" to="/pricing">
@@ -40,7 +40,7 @@ function Navbar({seeker,setSeeker}) {
         </NavLink>
 
         <NavLink className="Login" to="/login">
-        {seeker ? null : "Login" }
+          Align
         </NavLink>
 
         <div className="Logout" onClick={handleLogout}>
