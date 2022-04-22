@@ -32,9 +32,9 @@ function Login() {
     })
     .then(resp => resp.json())
     .then(data => {
-      alertVibes()
       console.log(data)})
       window.location.reload();
+      alertVibes()
   }
 
   return (

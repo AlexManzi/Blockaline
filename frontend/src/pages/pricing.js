@@ -125,7 +125,7 @@ console.log(coNumber)
         <h1>Enter your job posting here!</h1>
         <div id="jobinfohere">
         <input className="jobinputs" type="text" onChange={handleTitle} placeholder='Job Title'></input>
-        <select className='select' value={coNumber} onChange={e=>setCoNumber(e.target.value)}>
+        <select className='jobinputs' value={coNumber} onChange={e=>setCoNumber(e.target.value)}>
           <option value="location" disabled hidden> Choose Location</option>
           <option> Flatiron</option>
           <option>Alibaba Group</option>

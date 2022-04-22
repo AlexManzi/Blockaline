@@ -77,7 +77,7 @@ function Signup() {
           <option>Cyber Security</option>
           <option>UX Design</option>
         </select>
-        <button id="signupbutton" className='signupinput' onClick={handleSubmit}>Sign Up</button>
+        <Link to="/login"><button id="signupbutton" className='signupinput' onClick={handleSubmit}>Sign Up</button></Link>
         </div>
         <div id="login">
         <p>Already have an account?</p> <Link to="/login"><p id="larea">Login here!</p></Link>
